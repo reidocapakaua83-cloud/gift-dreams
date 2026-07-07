@@ -1,0 +1,1 @@
+version: '3.8'\n\nservices:\n  postgres:\n    image: postgres:16-alpine\n    environment:\n      POSTGRES_USER: gift_dreams_user\n      POSTGRES_PASSWORD: gift_dreams_pass\n      POSTGRES_DB: gift_dreams\n    ports:\n      - "5432:5432"\n    volumes:\n      - postgres_data:/var/lib/postgresql/data\n\nvolumes:\n  postgres_data:\n
